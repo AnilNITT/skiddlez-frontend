@@ -2950,7 +2950,7 @@ em {
   position: relative;
   background-color: transparent;
   z-index: 1500;
-  width: 90%;
+  width: 92%;
   margin: auto;
 }
 
@@ -3513,14 +3513,14 @@ em {
   width: 100%;
   max-height: calc(100vh - 109px);
   overflow: auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-bottom: 4rem;
   padding-top: 1rem;
 }
 
 
 .user-modal-table li {
-  width: 33%;
+  width: 356px;
   height: 150px;
 }
 
@@ -3676,11 +3676,33 @@ em {
 
 /* users modal */
 /* notifications modal START */
+@media only screen and (max-width: 1100px) {
+  #user-modal {
+    max-width: 75%;
+    overflow: hidden;
+    height: 525px;
+}
+}
+
 @media only screen and (min-width: 1024px) {
-  .ui.modal.notification-popup {
-    top: 55px;
-    right: 2rem;
-  }
+  .dimmed.dimmable > .ui.animating.dimmer, .dimmed.dimmable > .ui.visible.dimmer, .ui.active.dimmer {
+    opacity: 1;
+    padding-left: 5rem;
+}
+}
+
+@media only screen and (max-width: 750px) {
+  .dimmed.dimmable > .ui.animating.dimmer, .dimmed.dimmable > .ui.visible.dimmer, .ui.active.dimmer {
+    opacity: 1;
+    padding-left: 5rem;
+}
+}
+
+@media only screen and (max-width: 550px) {
+  .dimmed.dimmable > .ui.animating.dimmer, .dimmed.dimmable > .ui.visible.dimmer, .ui.active.dimmer {
+    opacity: 1;
+    padding-left: 6rem;
+}
 }
 
 .glass-btn.notification-btn p {
@@ -6000,7 +6022,7 @@ padding-bottom: 6px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(180deg, #0088df 0%, #00f1c3 100%);
+  background: linear-gradient(180deg, #2dadff 0%, #00f1c3 100%);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   height: 100%;
   padding: 8px;
@@ -6438,7 +6460,8 @@ text-align: center;
 /* Default Theme */
 
 .bg-default.ui.modal {
-  background: linear-gradient(180deg, #76caff 0%, #73e1cc 100%);
+  /* background: linear-gradient(180deg, #76caff 0%, #73e1cc 100%); */
+  background: white;
   box-shadow: 0px 0px 20px rgb(255 255 255 / 20%);
 }
 
@@ -6446,6 +6469,25 @@ text-align: center;
   background:white;
   color: #0065A5;
   font-weight: 100;
+}
+
+.bg-default .settings-modal-content {
+  width: 45%;
+  padding: 1rem;
+  padding-top: 0rem;
+  left: 0;
+  background: linear-gradient(180deg, #76caff 0%, #73e1cc 100%);
+}
+
+.bg-default .subscribe-pane {
+  margin: 0px 16px;
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, #76caff 0%, #73e1cc 100%);
+  margin-bottom: 16px;
+  width: 47%;
 }
 
 .bg-default.footer{
